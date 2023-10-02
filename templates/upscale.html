@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>Display Data</title>
+    <style>
+        a{
+            border: 1px solid grey;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            padding: 2px;
+            font-size: medium;
+            width:fit-content
+        }
+        #imageContainer{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
     <img src="{{ url_for('static', filename=name) }}"  alt="uploaded image" width="200px">
@@ -11,7 +26,6 @@
 
     <button onclick="displayImage()">Display Image</button>
     <div id="imageContainer"></div>
-
     <script src="../static/script.js"></script>
 </body>
 </html>
