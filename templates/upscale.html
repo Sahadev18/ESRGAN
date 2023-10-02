@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename=name) }}"  alt="uploaded image" width="200px">
+    <form action="/upscale" method="post" enctype="multipart/form-data">
+        <button type="submit">upscale</button>
+    </form> 
+
+    <button onclick="displayImage()">Display Image</button>
+    <div id="imageContainer"></div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
